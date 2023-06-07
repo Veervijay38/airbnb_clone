@@ -4,7 +4,7 @@ import "./globals.css";
 import { Nunito } from "next/font/google";
 
 import RegisterModal from "@/app/components/modals/RegisterModal";
-import RentModal from '@/app/components/modals/RentModal';
+import RentModal from "@/app/components/modals/RentModal";
 import ToasterProvider from "./providers/ToasterProvider";
 import LoginModal from "./components/modals/LoginModal";
 import getCurrentUser from "./actions/getCurrentUser";
@@ -35,7 +35,7 @@ export default async function RootLayout({
         <LoginModal />
         <RentModal />
         <Navbar currentUser={currentUser} />
-        {children}
+        <div className="pb-20 pt-28">{children}</div>
       </body>
     </html>
   );
