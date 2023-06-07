@@ -4,9 +4,10 @@ import "./globals.css";
 import { Nunito } from "next/font/google";
 
 import RegisterModal from "@/app/components/modals/RegisterModal";
+import RentModal from '@/app/components/modals/RentModal';
 import ToasterProvider from "./providers/ToasterProvider";
 import LoginModal from "./components/modals/LoginModal";
-import getCurrentUser from './actions/getCurrentUser';
+import getCurrentUser from "./actions/getCurrentUser";
 
 export const metadata = {
   title: "Aribnb",
@@ -28,10 +29,12 @@ export default async function RootLayout({
     <html lang="en">
       <body className={font.className}>
         {/* <Modal isOpen title="Hello  World" actionLabel="Submit" /> */}
+
         <ToasterProvider />
         <RegisterModal />
         <LoginModal />
-        <Navbar currentUser={currentUser}/>
+        <RentModal />
+        <Navbar currentUser={currentUser} />
         {children}
       </body>
     </html>
